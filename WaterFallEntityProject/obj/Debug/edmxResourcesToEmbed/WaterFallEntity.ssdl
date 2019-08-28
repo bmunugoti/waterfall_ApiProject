@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WaterFallProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TblAdminChemicalTest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestName" Type="varchar" MaxLength="50" />
+    <Property Name="TestType" Type="varchar" MaxLength="50" />
+    <Property Name="TestType1" Type="varchar" MaxLength="50" />
+    <Property Name="TestDescription" Type="varchar(max)" />
+    <Property Name="TestCondition" Type="varchar" MaxLength="50" />
+    <Property Name="UnitOfMeasurment" Type="varchar" MaxLength="50" />
+    <Property Name="TestMin" Type="int" />
+    <Property Name="TestMax" Type="int" />
+    <Property Name="TestLessthan" Type="int" />
+    <Property Name="TestGreaterThan" Type="int" />
+    <Property Name="TestFile" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="TblAdminIncubator">
+    <Key>
+      <PropertyRef Name="IncubatorId" />
+    </Key>
+    <Property Name="IncubatorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IncubatorName" Type="varchar(max)" />
+    <Property Name="IncubatorDescription" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="TblAdminMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Admin1" Type="varchar" MaxLength="50" />
+    <Property Name="Admin2" Type="varchar" MaxLength="50" />
+    <Property Name="Admin3" Type="varchar" MaxLength="50" />
+    <Property Name="Admin4" Type="varchar" MaxLength="50" />
+    <Property Name="Admin5" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblAdminSample">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SampleLocation1" Type="varchar" MaxLength="50" />
+    <Property Name="SampleLocation2" Type="varchar" MaxLength="50" />
+    <Property Name="SampleLocation3" Type="varchar" MaxLength="50" />
+    <Property Name="SampleLocation4" Type="varchar" MaxLength="50" />
+    <Property Name="SampleName" Type="varchar" MaxLength="50" />
+    <Property Name="SampleType" Type="varchar" MaxLength="50" />
+    <Property Name="Frequncy" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="SelectFrequncy" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="WaterFallProjectModelStoreContainer">
+    <EntitySet Name="TblAdminChemicalTest" EntityType="Self.TblAdminChemicalTest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAdminIncubator" EntityType="Self.TblAdminIncubator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAdminMaster" EntityType="Self.TblAdminMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAdminSample" EntityType="Self.TblAdminSample" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

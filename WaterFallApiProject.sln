@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterFallApiProject", "WaterFallApiProject\WaterFallApiProject.csproj", "{F4A9700A-AEBF-4010-B20D-0D0455325CFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterFallService", "WaterFallService\WaterFallService.csproj", "{D22BD2B7-0C4F-4C4B-84F1-0554DB5ADB49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterFallRepository", "WaterFallRepository\WaterFallRepository.csproj", "{FA4F2045-677B-4E31-9592-6D934DF27C0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterFallEntityProject", "WaterFallEntityProject\WaterFallEntityProject.csproj", "{252FD511-044B-4A3A-A3EF-DC4A7C917812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterFallModelProject", "WaterFallModelProject\WaterFallModelProject.csproj", "{2C5E80A9-74F7-4003-83C6-AB2F0944C764}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4A9700A-AEBF-4010-B20D-0D0455325CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A9700A-AEBF-4010-B20D-0D0455325CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A9700A-AEBF-4010-B20D-0D0455325CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A9700A-AEBF-4010-B20D-0D0455325CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D22BD2B7-0C4F-4C4B-84F1-0554DB5ADB49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D22BD2B7-0C4F-4C4B-84F1-0554DB5ADB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D22BD2B7-0C4F-4C4B-84F1-0554DB5ADB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D22BD2B7-0C4F-4C4B-84F1-0554DB5ADB49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA4F2045-677B-4E31-9592-6D934DF27C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA4F2045-677B-4E31-9592-6D934DF27C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA4F2045-677B-4E31-9592-6D934DF27C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA4F2045-677B-4E31-9592-6D934DF27C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{252FD511-044B-4A3A-A3EF-DC4A7C917812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{252FD511-044B-4A3A-A3EF-DC4A7C917812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{252FD511-044B-4A3A-A3EF-DC4A7C917812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{252FD511-044B-4A3A-A3EF-DC4A7C917812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C5E80A9-74F7-4003-83C6-AB2F0944C764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C5E80A9-74F7-4003-83C6-AB2F0944C764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C5E80A9-74F7-4003-83C6-AB2F0944C764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C5E80A9-74F7-4003-83C6-AB2F0944C764}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,13 @@
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallService\bin\Debug\WaterFallService.dll
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallService\bin\Debug\WaterFallService.pdb
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallService\bin\Debug\WaterFallModelProject.dll
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallService\bin\Debug\WaterFallRepository.dll
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallService\bin\Debug\WaterFallEntityProject.dll
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallService\bin\Debug\EntityFramework.dll
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallService\bin\Debug\WaterFallModelProject.pdb
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallService\bin\Debug\WaterFallRepository.pdb
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallService\bin\Debug\WaterFallEntityProject.pdb
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallService\bin\Debug\EntityFramework.xml
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallService\obj\Debug\WaterFallService.csprojResolveAssemblyReference.cache
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallService\obj\Debug\WaterFallService.dll
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallService\obj\Debug\WaterFallService.pdb

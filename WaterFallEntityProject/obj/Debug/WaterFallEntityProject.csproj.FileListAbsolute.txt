@@ -1,0 +1,10 @@
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallEntityProject\bin\Debug\WaterFallEntityProject.dll.config
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallEntityProject\bin\Debug\WaterFallEntityProject.dll
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallEntityProject\bin\Debug\WaterFallEntityProject.pdb
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallEntityProject\bin\Debug\EntityFramework.dll
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallEntityProject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallEntityProject\bin\Debug\EntityFramework.xml
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallEntityProject\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallEntityProject\obj\Debug\WaterFallEntityProject.csprojResolveAssemblyReference.cache
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallEntityProject\obj\Debug\WaterFallEntityProject.dll
+C:\Users\sri\Documents\Visual Studio 2015\Projects\WaterFallApiProject\WaterFallEntityProject\obj\Debug\WaterFallEntityProject.pdb

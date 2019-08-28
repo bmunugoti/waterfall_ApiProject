@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WaterFallProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TblAdminChemicalTest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TestName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TestType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TestType1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TestDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TestCondition" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UnitOfMeasurment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TestMin" Type="Int32" />
+    <Property Name="TestMax" Type="Int32" />
+    <Property Name="TestLessthan" Type="Int32" />
+    <Property Name="TestGreaterThan" Type="Int32" />
+    <Property Name="TestFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LogedInUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblAdminIncubator">
+    <Key>
+      <PropertyRef Name="IncubatorId" />
+    </Key>
+    <Property Name="IncubatorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IncubatorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IncubatorDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LogedInUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblAdminMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Admin1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Admin2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Admin3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Admin4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Admin5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblAdminSample">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SampleLocation1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SampleLocation2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SampleLocation3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SampleLocation4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SampleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SampleType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Frequncy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SelectFrequncy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LogedInUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="WaterFallProjectEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TblAdminChemicalTests" EntityType="Self.TblAdminChemicalTest" />
+    <EntitySet Name="TblAdminIncubators" EntityType="Self.TblAdminIncubator" />
+    <EntitySet Name="TblAdminMasters" EntityType="Self.TblAdminMaster" />
+    <EntitySet Name="TblAdminSamples" EntityType="Self.TblAdminSample" />
+    <EntitySet Name="TblTestGroupings" EntityType="WaterFallProjectModel.TblTestGrouping" />
+    <EntitySet Name="TblSchedules" EntityType="WaterFallProjectModel.TblSchedule" />
+    <EntitySet Name="TblApproveSamples" EntityType="WaterFallProjectModel.TblApproveSample" />
+    <EntitySet Name="TblWorksheetEntries" EntityType="WaterFallProjectModel.TblWorksheetEntry" />
+    <EntitySet Name="TblActivities" EntityType="WaterFallProjectModel.TblActivity" />
+  </EntityContainer>
+  <EntityType Name="TblTestGrouping">
+    <Key>
+      <PropertyRef Name="TestGroupId" />
+    </Key>
+    <Property Name="TestGroupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TestGroupName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TestGroupDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SelectedIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MappedSampleIdToTestGroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblSchedule">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="ScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SampleId" Type="Int32" />
+    <Property Name="SampleLocation" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FrequencyDays" Type="Int32" />
+    <Property Name="FrequencyNumber" Type="Int32" />
+    <Property Name="SampleType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ScheduleDate" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="SampleName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblApproveSample">
+    <Key>
+      <PropertyRef Name="ApproveId" />
+    </Key>
+    <Property Name="ApproveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SampleId" Type="Int32" />
+    <Property Name="SampleLocation" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TestId" Type="Int32" />
+    <Property Name="PassOrFail" Type="Int32" />
+    <Property Name="TransactionId" Type="Int32" />
+    <Property Name="TestResult" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TblWorksheetEntry">
+    <Key>
+      <PropertyRef Name="WorksheetId" />
+    </Key>
+    <Property Name="WorksheetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SampleId" Type="Int32" />
+    <Property Name="SampleLocation" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="SampleTime" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="SampleType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TestGroupName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="FinalResults" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblActivity">
+    <Key>
+      <PropertyRef Name="ActivityId" />
+    </Key>
+    <Property Name="ActivityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="SampleId" Type="Int32" />
+    <Property Name="SampleLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SampleType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FrequencyDays" Type="Int32" />
+    <Property Name="FrequencyNumber" Type="Int32" />
+    <Property Name="ScheduleDate" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DeactivatedReason" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AcceptedReject" Type="Int32" />
+  </EntityType>
+</Schema>

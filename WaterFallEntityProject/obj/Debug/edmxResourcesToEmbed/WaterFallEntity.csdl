@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WaterFallProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TblAdminChemicalTest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TestName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TestType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TestType1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TestDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TestCondition" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UnitOfMeasurment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TestMin" Type="Int32" />
+    <Property Name="TestMax" Type="Int32" />
+    <Property Name="TestLessthan" Type="Int32" />
+    <Property Name="TestGreaterThan" Type="Int32" />
+    <Property Name="TestFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblAdminIncubator">
+    <Key>
+      <PropertyRef Name="IncubatorId" />
+    </Key>
+    <Property Name="IncubatorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IncubatorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IncubatorDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblAdminMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Admin1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Admin2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Admin3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Admin4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Admin5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblAdminSample">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SampleLocation1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SampleLocation2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SampleLocation3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SampleLocation4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SampleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SampleType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Frequncy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SelectFrequncy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="WaterFallProjectEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TblAdminChemicalTests" EntityType="Self.TblAdminChemicalTest" />
+    <EntitySet Name="TblAdminIncubators" EntityType="Self.TblAdminIncubator" />
+    <EntitySet Name="TblAdminMasters" EntityType="Self.TblAdminMaster" />
+    <EntitySet Name="TblAdminSamples" EntityType="Self.TblAdminSample" />
+  </EntityContainer>
+</Schema>

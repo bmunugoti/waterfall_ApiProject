@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WaterFallProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TblActivities">
+          <Key>
+            <PropertyRef Name="ActivityId" />
+          </Key>
+          <Property Name="ActivityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="SampleId" Type="int" />
+          <Property Name="SampleLocation" Type="nvarchar(max)" />
+          <Property Name="SampleType" Type="nvarchar" MaxLength="150" />
+          <Property Name="FrequencyDays" Type="int" />
+          <Property Name="FrequencyNumber" Type="int" />
+          <Property Name="ScheduleDate" Type="nvarchar" MaxLength="150" />
+          <Property Name="DeactivatedReason" Type="nvarchar" MaxLength="250" />
+          <Property Name="AcceptedReject" Type="int" />
+        </EntityType>
+        <EntityType Name="TblAdminChemicalTest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TestName" Type="varchar" MaxLength="50" />
+          <Property Name="TestType" Type="varchar" MaxLength="50" />
+          <Property Name="TestType1" Type="varchar" MaxLength="50" />
+          <Property Name="TestDescription" Type="varchar(max)" />
+          <Property Name="TestCondition" Type="varchar" MaxLength="50" />
+          <Property Name="UnitOfMeasurment" Type="varchar" MaxLength="50" />
+          <Property Name="TestMin" Type="int" />
+          <Property Name="TestMax" Type="int" />
+          <Property Name="TestLessthan" Type="int" />
+          <Property Name="TestGreaterThan" Type="int" />
+          <Property Name="TestFile" Type="varchar(max)" />
+          <Property Name="LogedInUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblAdminIncubator">
+          <Key>
+            <PropertyRef Name="IncubatorId" />
+          </Key>
+          <Property Name="IncubatorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IncubatorName" Type="varchar(max)" />
+          <Property Name="IncubatorDescription" Type="varchar(max)" />
+          <Property Name="LogedInUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblAdminMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Admin1" Type="varchar" MaxLength="50" />
+          <Property Name="Admin2" Type="varchar" MaxLength="50" />
+          <Property Name="Admin3" Type="varchar" MaxLength="50" />
+          <Property Name="Admin4" Type="varchar" MaxLength="50" />
+          <Property Name="Admin5" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblAdminSample">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SampleLocation1" Type="varchar" MaxLength="50" />
+          <Property Name="SampleLocation2" Type="varchar" MaxLength="50" />
+          <Property Name="SampleLocation3" Type="varchar" MaxLength="50" />
+          <Property Name="SampleLocation4" Type="varchar" MaxLength="50" />
+          <Property Name="SampleName" Type="varchar" MaxLength="50" />
+          <Property Name="SampleType" Type="varchar" MaxLength="50" />
+          <Property Name="Frequncy" Type="varchar" MaxLength="50" />
+          <Property Name="Remarks" Type="varchar(max)" />
+          <Property Name="SelectFrequncy" Type="varchar" MaxLength="50" />
+          <Property Name="LogedInUser" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblApproveSample">
+          <Key>
+            <PropertyRef Name="ApproveId" />
+          </Key>
+          <Property Name="ApproveId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SampleId" Type="int" />
+          <Property Name="SampleLocation" Type="nvarchar" MaxLength="150" />
+          <Property Name="TestId" Type="int" />
+          <Property Name="PassOrFail" Type="int" />
+          <Property Name="TransactionId" Type="int" />
+          <Property Name="TestResult" Type="int" />
+        </EntityType>
+        <EntityType Name="TblSchedule">
+          <Key>
+            <PropertyRef Name="ScheduleId" />
+          </Key>
+          <Property Name="ScheduleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SampleId" Type="int" />
+          <Property Name="SampleLocation" Type="nvarchar" MaxLength="150" />
+          <Property Name="FrequencyDays" Type="int" />
+          <Property Name="FrequencyNumber" Type="int" />
+          <Property Name="SampleType" Type="nvarchar" MaxLength="150" />
+          <Property Name="ScheduleDate" Type="nvarchar" MaxLength="150" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="150" />
+          <Property Name="createdDate" Type="varchar" MaxLength="150" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="150" />
+          <Property Name="ModifiedDate" Type="varchar" MaxLength="150" />
+          <Property Name="SampleName" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="TblTestGrouping">
+          <Key>
+            <PropertyRef Name="TestGroupId" />
+          </Key>
+          <Property Name="TestGroupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TestGroupName" Type="nvarchar" MaxLength="150" />
+          <Property Name="TestGroupDescription" Type="nvarchar(max)" />
+          <Property Name="SelectedIds" Type="nvarchar(max)" />
+          <Property Name="MappedSampleIdToTestGroup" Type="nvarchar(max)" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="150" />
+          <Property Name="createdDate" Type="varchar" MaxLength="150" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="150" />
+          <Property Name="ModifiedDate" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="TblWorksheetEntry">
+          <Key>
+            <PropertyRef Name="WorksheetId" />
+          </Key>
+          <Property Name="WorksheetId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SampleId" Type="int" />
+          <Property Name="SampleLocation" Type="nvarchar" MaxLength="150" />
+          <Property Name="SampleTime" Type="nvarchar" MaxLength="150" />
+          <Property Name="SampleType" Type="nvarchar" MaxLength="250" />
+          <Property Name="TestGroupName" Type="nvarchar" MaxLength="250" />
+          <Property Name="FinalResults" Type="nvarchar" MaxLength="250" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="WaterFallProjectModelStoreContainer">
+          <EntitySet Name="TblActivities" EntityType="Self.TblActivities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblAdminChemicalTest" EntityType="Self.TblAdminChemicalTest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblAdminIncubator" EntityType="Self.TblAdminIncubator" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblAdminMaster" EntityType="Self.TblAdminMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblAdminSample" EntityType="Self.TblAdminSample" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblApproveSample" EntityType="Self.TblApproveSample" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblSchedule" EntityType="Self.TblSchedule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblTestGrouping" EntityType="Self.TblTestGrouping" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblWorksheetEntry" EntityType="Self.TblWorksheetEntry" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WaterFallProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TblAdminChemicalTest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TestName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TestType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TestType1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TestDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TestCondition" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UnitOfMeasurment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TestMin" Type="Int32" />
+          <Property Name="TestMax" Type="Int32" />
+          <Property Name="TestLessthan" Type="Int32" />
+          <Property Name="TestGreaterThan" Type="Int32" />
+          <Property Name="TestFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LogedInUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblAdminIncubator">
+          <Key>
+            <PropertyRef Name="IncubatorId" />
+          </Key>
+          <Property Name="IncubatorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IncubatorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IncubatorDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LogedInUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblAdminMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Admin1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Admin2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Admin3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Admin4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Admin5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblAdminSample">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SampleLocation1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SampleLocation2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SampleLocation3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SampleLocation4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SampleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SampleType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Frequncy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SelectFrequncy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LogedInUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="WaterFallProjectEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TblAdminChemicalTests" EntityType="Self.TblAdminChemicalTest" />
+          <EntitySet Name="TblAdminIncubators" EntityType="Self.TblAdminIncubator" />
+          <EntitySet Name="TblAdminMasters" EntityType="Self.TblAdminMaster" />
+          <EntitySet Name="TblAdminSamples" EntityType="Self.TblAdminSample" />
+          <EntitySet Name="TblTestGroupings" EntityType="WaterFallProjectModel.TblTestGrouping" />
+          <EntitySet Name="TblSchedules" EntityType="WaterFallProjectModel.TblSchedule" />
+          <EntitySet Name="TblApproveSamples" EntityType="WaterFallProjectModel.TblApproveSample" />
+          <EntitySet Name="TblWorksheetEntries" EntityType="WaterFallProjectModel.TblWorksheetEntry" />
+          <EntitySet Name="TblActivities" EntityType="WaterFallProjectModel.TblActivity" />
+        </EntityContainer>
+        <EntityType Name="TblTestGrouping">
+          <Key>
+            <PropertyRef Name="TestGroupId" />
+          </Key>
+          <Property Name="TestGroupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TestGroupName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="TestGroupDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SelectedIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MappedSampleIdToTestGroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="createdDate" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedDate" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblSchedule">
+          <Key>
+            <PropertyRef Name="ScheduleId" />
+          </Key>
+          <Property Name="ScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SampleId" Type="Int32" />
+          <Property Name="SampleLocation" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FrequencyDays" Type="Int32" />
+          <Property Name="FrequencyNumber" Type="Int32" />
+          <Property Name="SampleType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ScheduleDate" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="createdDate" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedDate" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="SampleName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblApproveSample">
+          <Key>
+            <PropertyRef Name="ApproveId" />
+          </Key>
+          <Property Name="ApproveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SampleId" Type="Int32" />
+          <Property Name="SampleLocation" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="TestId" Type="Int32" />
+          <Property Name="PassOrFail" Type="Int32" />
+          <Property Name="TransactionId" Type="Int32" />
+          <Property Name="TestResult" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TblWorksheetEntry">
+          <Key>
+            <PropertyRef Name="WorksheetId" />
+          </Key>
+          <Property Name="WorksheetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SampleId" Type="Int32" />
+          <Property Name="SampleLocation" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="SampleTime" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="SampleType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TestGroupName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FinalResults" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblActivity">
+          <Key>
+            <PropertyRef Name="ActivityId" />
+          </Key>
+          <Property Name="ActivityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="SampleId" Type="Int32" />
+          <Property Name="SampleLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SampleType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FrequencyDays" Type="Int32" />
+          <Property Name="FrequencyNumber" Type="Int32" />
+          <Property Name="ScheduleDate" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="DeactivatedReason" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="AcceptedReject" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WaterFallProjectModelStoreContainer" CdmEntityContainer="WaterFallProjectEntities2">
+          <EntitySetMapping Name="TblAdminChemicalTests">
+            <EntityTypeMapping TypeName="WaterFallProjectModel.TblAdminChemicalTest">
+              <MappingFragment StoreEntitySet="TblAdminChemicalTest">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LogedInUser" ColumnName="LogedInUser" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TestName" ColumnName="TestName" />
+                <ScalarProperty Name="TestType" ColumnName="TestType" />
+                <ScalarProperty Name="TestType1" ColumnName="TestType1" />
+                <ScalarProperty Name="TestDescription" ColumnName="TestDescription" />
+                <ScalarProperty Name="TestCondition" ColumnName="TestCondition" />
+                <ScalarProperty Name="UnitOfMeasurment" ColumnName="UnitOfMeasurment" />
+                <ScalarProperty Name="TestMin" ColumnName="TestMin" />
+                <ScalarProperty Name="TestMax" ColumnName="TestMax" />
+                <ScalarProperty Name="TestLessthan" ColumnName="TestLessthan" />
+                <ScalarProperty Name="TestGreaterThan" ColumnName="TestGreaterThan" />
+                <ScalarProperty Name="TestFile" ColumnName="TestFile" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblAdminIncubators">
+            <EntityTypeMapping TypeName="WaterFallProjectModel.TblAdminIncubator">
+              <MappingFragment StoreEntitySet="TblAdminIncubator">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LogedInUser" ColumnName="LogedInUser" />
+                <ScalarProperty Name="IncubatorId" ColumnName="IncubatorId" />
+                <ScalarProperty Name="IncubatorName" ColumnName="IncubatorName" />
+                <ScalarProperty Name="IncubatorDescription" ColumnName="IncubatorDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblAdminMasters">
+            <EntityTypeMapping TypeName="WaterFallProjectModel.TblAdminMaster">
+              <MappingFragment StoreEntitySet="TblAdminMaster">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Admin1" ColumnName="Admin1" />
+                <ScalarProperty Name="Admin2" ColumnName="Admin2" />
+                <ScalarProperty Name="Admin3" ColumnName="Admin3" />
+                <ScalarProperty Name="Admin4" ColumnName="Admin4" />
+                <ScalarProperty Name="Admin5" ColumnName="Admin5" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblAdminSamples">
+            <EntityTypeMapping TypeName="WaterFallProjectModel.TblAdminSample">
+              <MappingFragment StoreEntitySet="TblAdminSample">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LogedInUser" ColumnName="LogedInUser" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SampleLocation1" ColumnName="SampleLocation1" />
+                <ScalarProperty Name="SampleLocation2" ColumnName="SampleLocation2" />
+                <ScalarProperty Name="SampleLocation3" ColumnName="SampleLocation3" />
+                <ScalarProperty Name="SampleLocation4" ColumnName="SampleLocation4" />
+                <ScalarProperty Name="SampleName" ColumnName="SampleName" />
+                <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+                <ScalarProperty Name="Frequncy" ColumnName="Frequncy" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="SelectFrequncy" ColumnName="SelectFrequncy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblTestGroupings">
+            <EntityTypeMapping TypeName="WaterFallProjectModel.TblTestGrouping">
+              <MappingFragment StoreEntitySet="TblTestGrouping">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="MappedSampleIdToTestGroup" ColumnName="MappedSampleIdToTestGroup" />
+                <ScalarProperty Name="SelectedIds" ColumnName="SelectedIds" />
+                <ScalarProperty Name="TestGroupDescription" ColumnName="TestGroupDescription" />
+                <ScalarProperty Name="TestGroupName" ColumnName="TestGroupName" />
+                <ScalarProperty Name="TestGroupId" ColumnName="TestGroupId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblSchedules">
+            <EntityTypeMapping TypeName="WaterFallProjectModel.TblSchedule">
+              <MappingFragment StoreEntitySet="TblSchedule">
+                <ScalarProperty Name="SampleName" ColumnName="SampleName" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+                <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+                <ScalarProperty Name="FrequencyNumber" ColumnName="FrequencyNumber" />
+                <ScalarProperty Name="FrequencyDays" ColumnName="FrequencyDays" />
+                <ScalarProperty Name="SampleLocation" ColumnName="SampleLocation" />
+                <ScalarProperty Name="SampleId" ColumnName="SampleId" />
+                <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblApproveSamples">
+            <EntityTypeMapping TypeName="WaterFallProjectModel.TblApproveSample">
+              <MappingFragment StoreEntitySet="TblApproveSample">
+                <ScalarProperty Name="TestResult" ColumnName="TestResult" />
+                <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+                <ScalarProperty Name="PassOrFail" ColumnName="PassOrFail" />
+                <ScalarProperty Name="TestId" ColumnName="TestId" />
+                <ScalarProperty Name="SampleLocation" ColumnName="SampleLocation" />
+                <ScalarProperty Name="SampleId" ColumnName="SampleId" />
+                <ScalarProperty Name="ApproveId" ColumnName="ApproveId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblWorksheetEntries">
+            <EntityTypeMapping TypeName="WaterFallProjectModel.TblWorksheetEntry">
+              <MappingFragment StoreEntitySet="TblWorksheetEntry">
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="FinalResults" ColumnName="FinalResults" />
+                <ScalarProperty Name="TestGroupName" ColumnName="TestGroupName" />
+                <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+                <ScalarProperty Name="SampleTime" ColumnName="SampleTime" />
+                <ScalarProperty Name="SampleLocation" ColumnName="SampleLocation" />
+                <ScalarProperty Name="SampleId" ColumnName="SampleId" />
+                <ScalarProperty Name="WorksheetId" ColumnName="WorksheetId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblActivities">
+            <EntityTypeMapping TypeName="WaterFallProjectModel.TblActivity">
+              <MappingFragment StoreEntitySet="TblActivities">
+                <ScalarProperty Name="AcceptedReject" ColumnName="AcceptedReject" />
+                <ScalarProperty Name="DeactivatedReason" ColumnName="DeactivatedReason" />
+                <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+                <ScalarProperty Name="FrequencyNumber" ColumnName="FrequencyNumber" />
+                <ScalarProperty Name="FrequencyDays" ColumnName="FrequencyDays" />
+                <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+                <ScalarProperty Name="SampleLocation" ColumnName="SampleLocation" />
+                <ScalarProperty Name="SampleId" ColumnName="SampleId" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

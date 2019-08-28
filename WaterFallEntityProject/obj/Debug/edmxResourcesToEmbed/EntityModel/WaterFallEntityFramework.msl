@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WaterFallProjectModelStoreContainer" CdmEntityContainer="WaterFallProjectEntities">
+    <EntitySetMapping Name="TblAdminChemicalTests">
+      <EntityTypeMapping TypeName="WaterFallProjectModel.TblAdminChemicalTest">
+        <MappingFragment StoreEntitySet="TblAdminChemicalTest">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TestName" ColumnName="TestName" />
+          <ScalarProperty Name="TestType" ColumnName="TestType" />
+          <ScalarProperty Name="TestType1" ColumnName="TestType1" />
+          <ScalarProperty Name="TestDescription" ColumnName="TestDescription" />
+          <ScalarProperty Name="TestCondition" ColumnName="TestCondition" />
+          <ScalarProperty Name="UnitOfMeasurment" ColumnName="UnitOfMeasurment" />
+          <ScalarProperty Name="TestMin" ColumnName="TestMin" />
+          <ScalarProperty Name="TestMax" ColumnName="TestMax" />
+          <ScalarProperty Name="TestLessthan" ColumnName="TestLessthan" />
+          <ScalarProperty Name="TestGreaterThan" ColumnName="TestGreaterThan" />
+          <ScalarProperty Name="TestFile" ColumnName="TestFile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAdminIncubators">
+      <EntityTypeMapping TypeName="WaterFallProjectModel.TblAdminIncubator">
+        <MappingFragment StoreEntitySet="TblAdminIncubator">
+          <ScalarProperty Name="IncubatorId" ColumnName="IncubatorId" />
+          <ScalarProperty Name="IncubatorName" ColumnName="IncubatorName" />
+          <ScalarProperty Name="IncubatorDescription" ColumnName="IncubatorDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAdminMasters">
+      <EntityTypeMapping TypeName="WaterFallProjectModel.TblAdminMaster">
+        <MappingFragment StoreEntitySet="TblAdminMaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Admin1" ColumnName="Admin1" />
+          <ScalarProperty Name="Admin2" ColumnName="Admin2" />
+          <ScalarProperty Name="Admin3" ColumnName="Admin3" />
+          <ScalarProperty Name="Admin4" ColumnName="Admin4" />
+          <ScalarProperty Name="Admin5" ColumnName="Admin5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAdminSamples">
+      <EntityTypeMapping TypeName="WaterFallProjectModel.TblAdminSample">
+        <MappingFragment StoreEntitySet="TblAdminSample">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SampleLocation1" ColumnName="SampleLocation1" />
+          <ScalarProperty Name="SampleLocation2" ColumnName="SampleLocation2" />
+          <ScalarProperty Name="SampleLocation3" ColumnName="SampleLocation3" />
+          <ScalarProperty Name="SampleLocation4" ColumnName="SampleLocation4" />
+          <ScalarProperty Name="SampleName" ColumnName="SampleName" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="Frequncy" ColumnName="Frequncy" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="SelectFrequncy" ColumnName="SelectFrequncy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

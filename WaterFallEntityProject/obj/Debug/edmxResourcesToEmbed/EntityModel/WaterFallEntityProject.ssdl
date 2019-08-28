@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WaterFallProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TblActivities">
+    <Key>
+      <PropertyRef Name="ActivityId" />
+    </Key>
+    <Property Name="ActivityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="SampleId" Type="int" />
+    <Property Name="SampleLocation" Type="nvarchar(max)" />
+    <Property Name="SampleType" Type="nvarchar" MaxLength="150" />
+    <Property Name="FrequencyDays" Type="int" />
+    <Property Name="FrequencyNumber" Type="int" />
+    <Property Name="ScheduleDate" Type="nvarchar" MaxLength="150" />
+    <Property Name="DeactivatedReason" Type="nvarchar" MaxLength="250" />
+    <Property Name="AcceptedReject" Type="int" />
+  </EntityType>
+  <EntityType Name="TblAdminChemicalTest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestName" Type="varchar" MaxLength="50" />
+    <Property Name="TestType" Type="varchar" MaxLength="50" />
+    <Property Name="TestType1" Type="varchar" MaxLength="50" />
+    <Property Name="TestDescription" Type="varchar(max)" />
+    <Property Name="TestCondition" Type="varchar" MaxLength="50" />
+    <Property Name="UnitOfMeasurment" Type="varchar" MaxLength="50" />
+    <Property Name="TestMin" Type="int" />
+    <Property Name="TestMax" Type="int" />
+    <Property Name="TestLessthan" Type="int" />
+    <Property Name="TestGreaterThan" Type="int" />
+    <Property Name="TestFile" Type="varchar(max)" />
+    <Property Name="LogedInUser" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblAdminIncubator">
+    <Key>
+      <PropertyRef Name="IncubatorId" />
+    </Key>
+    <Property Name="IncubatorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IncubatorName" Type="varchar(max)" />
+    <Property Name="IncubatorDescription" Type="varchar(max)" />
+    <Property Name="LogedInUser" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblAdminMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Admin1" Type="varchar" MaxLength="50" />
+    <Property Name="Admin2" Type="varchar" MaxLength="50" />
+    <Property Name="Admin3" Type="varchar" MaxLength="50" />
+    <Property Name="Admin4" Type="varchar" MaxLength="50" />
+    <Property Name="Admin5" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblAdminSample">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SampleLocation1" Type="varchar" MaxLength="50" />
+    <Property Name="SampleLocation2" Type="varchar" MaxLength="50" />
+    <Property Name="SampleLocation3" Type="varchar" MaxLength="50" />
+    <Property Name="SampleLocation4" Type="varchar" MaxLength="50" />
+    <Property Name="SampleName" Type="varchar" MaxLength="50" />
+    <Property Name="SampleType" Type="varchar" MaxLength="50" />
+    <Property Name="Frequncy" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="SelectFrequncy" Type="varchar" MaxLength="50" />
+    <Property Name="LogedInUser" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblApproveSample">
+    <Key>
+      <PropertyRef Name="ApproveId" />
+    </Key>
+    <Property Name="ApproveId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SampleId" Type="int" />
+    <Property Name="SampleLocation" Type="nvarchar" MaxLength="150" />
+    <Property Name="TestId" Type="int" />
+    <Property Name="PassOrFail" Type="int" />
+    <Property Name="TransactionId" Type="int" />
+    <Property Name="TestResult" Type="int" />
+  </EntityType>
+  <EntityType Name="TblSchedule">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="ScheduleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SampleId" Type="int" />
+    <Property Name="SampleLocation" Type="nvarchar" MaxLength="150" />
+    <Property Name="FrequencyDays" Type="int" />
+    <Property Name="FrequencyNumber" Type="int" />
+    <Property Name="SampleType" Type="nvarchar" MaxLength="150" />
+    <Property Name="ScheduleDate" Type="nvarchar" MaxLength="150" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="150" />
+    <Property Name="createdDate" Type="varchar" MaxLength="150" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="150" />
+    <Property Name="ModifiedDate" Type="varchar" MaxLength="150" />
+    <Property Name="SampleName" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="TblTestGrouping">
+    <Key>
+      <PropertyRef Name="TestGroupId" />
+    </Key>
+    <Property Name="TestGroupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestGroupName" Type="nvarchar" MaxLength="150" />
+    <Property Name="TestGroupDescription" Type="nvarchar(max)" />
+    <Property Name="SelectedIds" Type="nvarchar(max)" />
+    <Property Name="MappedSampleIdToTestGroup" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="150" />
+    <Property Name="createdDate" Type="varchar" MaxLength="150" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="150" />
+    <Property Name="ModifiedDate" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="TblWorksheetEntry">
+    <Key>
+      <PropertyRef Name="WorksheetId" />
+    </Key>
+    <Property Name="WorksheetId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SampleId" Type="int" />
+    <Property Name="SampleLocation" Type="nvarchar" MaxLength="150" />
+    <Property Name="SampleTime" Type="nvarchar" MaxLength="150" />
+    <Property Name="SampleType" Type="nvarchar" MaxLength="250" />
+    <Property Name="TestGroupName" Type="nvarchar" MaxLength="250" />
+    <Property Name="FinalResults" Type="nvarchar" MaxLength="250" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="WaterFallProjectModelStoreContainer">
+    <EntitySet Name="TblActivities" EntityType="Self.TblActivities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAdminChemicalTest" EntityType="Self.TblAdminChemicalTest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAdminIncubator" EntityType="Self.TblAdminIncubator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAdminMaster" EntityType="Self.TblAdminMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAdminSample" EntityType="Self.TblAdminSample" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblApproveSample" EntityType="Self.TblApproveSample" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblSchedule" EntityType="Self.TblSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblTestGrouping" EntityType="Self.TblTestGrouping" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblWorksheetEntry" EntityType="Self.TblWorksheetEntry" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
